@@ -1,0 +1,19 @@
+* { margin: 0; padding: 0;}
+
+div#reps {
+	display: inline-block;
+
+}
+
+video#video-player {
+	width: 	75%;
+	text-align: center;	
+	margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 20px;
+}
+
+h2 {
+	text-align: center;
+}
