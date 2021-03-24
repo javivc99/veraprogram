@@ -2,40 +2,55 @@ var beep = new Audio('src/beep.mp3');
 var audioterminado = new Audio('src/terminado.mp3');
 var repeticion = 1;
 var div = document.getElementById("reps");
-var limitrep = 10;
-
+var exname = document.getElementById('exname')
+var i = 0;
 
 var newsfeed = [
   {
-    videosrc: "",
+    exercise_name: "Sentadilla con KTB",
+    videosrc: "src/sentadilla.mp4",
     limitrep: 5
   },
   {
-    videosrc: "Bobby",
-    limitrep: 5
+    exercise_name: "Flexiones mal hechas",
+    videosrc: "src/flexion.mp4",
+    limitrep: 6
   },
-  {
-    videosrc: "Bobby",
-    limitrep: 5
-  }
 ];
 
+function ChangeSrc(Src) {
+    document.getElementById('my_video').src = Src + '.mp4';
+}
 
-  div.innerHTML ="Repeticion " + repeticion + " de " + limitrep;
+function carga(fuentevideo) {
+  document.getElementById('video-player').setAttribute("src", fuentevideo); 
+  div.innerHTML ="Repeticion " + repeticion + " de " + newsfeed[i].limitrep;
+  exname.innerHTML = newsfeed[i].exercise_name;
 
-  document.querySelector('video').addEventListener('ended', function () {
-    if (repeticion == limitrep) {
-  div.innerHTML ="COMPLETADO!!!";
-  audioterminado.play();
+}
+window.onload = carga(newsfeed[i].videosrc)
 
+document.querySelector('video').addEventListener('ended', function () {
+  if (repeticion == newsfeed[i].limitrep) {
+    div.innerHTML ="COMPLETADO!!!";
+    audioterminado.play();
+    i++;
+    carga(newsfeed[i].videosrc);
+    repeticion = 1;
+    div.innerHTML ="Repeticion " + repeticion + " de " + newsfeed[i].limitrep;
+    exname.innerHTML = newsfeed[i].exercise_name;
   } else {
-  beep.play();
-  this.play();
-  ++repeticion;
-  div.innerHTML ="Repeticion " + repeticion + " de " + limitrep;
-
+    beep.play();
+    this.play();
+    ++repeticion;
+    div.innerHTML ="Repeticion " + repeticion + " de " + newsfeed[i].limitrep;
+    exname.innerHTML = newsfeed[i].exercise_name;
   }
 })
+
+
+
+
 
 
 
