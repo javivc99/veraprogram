@@ -23,8 +23,14 @@ var newsfeed = [
   {
     exercise_name: "Flexiones mal hechas",
     videosrc: "src/flexion.mp4",
+    limitrep: 12,
+    tiempopreparacion: 8,
+  },
+  {
+    exercise_name: "Increible este ejercicio",
+    videosrc: "src/flexion.mp4",
     limitrep: 6,
-    tiempopreparacion: 12,
+    tiempopreparacion: 20,
   },
 ];
 
@@ -43,6 +49,8 @@ window.onload = carga(newsfeed[i].videosrc)
 function playy() {
     if (rest == true){
   repeatEverySecond()
+  document.getElementById('botonempezar').style.display = "none"
+
 }
     else {
     document.getElementById('video-player').play();
@@ -82,7 +90,7 @@ function repeatEverySecond() {
   intervalID = setInterval(sendMessage, 1000);
       document.getElementById('video-player').style.filter = "grayscale(100%)"
     document.getElementById('video-player').play();
-    textodescanso.innerHTML ="Preparate, empezamos en <br><br>" + (newsfeed[i].tiempopreparacion-contador);
+    textodescanso.innerHTML ="Preparate, empezamos en <br>" + "<div class=\'tiempodescanso\'>"+(newsfeed[i].tiempopreparacion-contador)+"<div>";
   
 }
 
@@ -91,7 +99,7 @@ function sendMessage(){
     document.getElementById('video-player').setAttribute("loop", "true"); 
 
     contador++
-    textodescanso.innerHTML ="Preparate, empezamos en <br><br>" + (newsfeed[i].tiempopreparacion-contador);
+    textodescanso.innerHTML ="Preparate, empezamos en <br>" + "<div class=\'tiempodescanso\'>"+(newsfeed[i].tiempopreparacion-contador)+"<div>";
 }
 else {
 rest = false

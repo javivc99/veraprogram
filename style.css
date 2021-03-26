@@ -1,4 +1,4 @@
-* { margin: 0; padding: 0;}
+* { margin: 3px}
 
 div#reps {
 	display: inline-block;
@@ -9,35 +9,57 @@ div#reps {
   position: relative;
   text-align: center;
   color: white;
+
 }
 
 video#video-player {
-	width: 	75%;
+	width: 	72%;
+  height: auto;
 	text-align: center;	
 	margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-bottom: 20px;
-
+  margin-right: auto;
+  display: block;
+  border-radius: 10px; 
     }
 
 
 h2 {
 	text-align: center;
+  font-size: 2vw;
+  font-family: 'Oswald', sans-serif;
+  color: #7993a7;
 }
 
 
 
 .texto-encima{
+    font-family: 'Oswald', sans-serif;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2vw;
+    text-align: center;
+    color: #336699;
+}
+
+.tiempodescanso{
+
+    font-size: 8vw;
+
+}
+
+#botonempezar {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 80px;
-    text-align: center;
-    color: #F63F17;
+    max-width: 12vw;
+    opacity: 0.8;
+    cursor: pointer;
 
-}
+
+  }
 
 
 
