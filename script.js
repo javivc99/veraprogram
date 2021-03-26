@@ -4,6 +4,7 @@ var repeticion = 1;
 var div = document.getElementById("reps");
 var exname = document.getElementById('exname')
 var textodescanso = document.getElementById('resttime')
+var frasemotivacion = document.getElementById('motivacion')
 var i = 0;
 var rest = true;
 
@@ -36,6 +37,11 @@ var newsfeed = [
 
 function ChangeSrc(Src) {
     document.getElementById('my_video').src = Src + '.mp4';
+}
+
+function frases_aleatorias(frases)
+{
+return frases[Math.floor(Math.random()*frases.length)];
 }
 
 function carga(fuentevideo) {
@@ -91,6 +97,8 @@ function repeatEverySecond() {
       document.getElementById('video-player').style.filter = "grayscale(100%)"
     document.getElementById('video-player').play();
     textodescanso.innerHTML ="Preparate, empezamos en <br>" + "<div class=\'tiempodescanso\'>"+(newsfeed[i].tiempopreparacion-contador)+"<div>";
+    frasemotivacion.innerHTML = frases_aleatorias(frases);
+
   
 }
 
@@ -100,21 +108,20 @@ function sendMessage(){
 
     contador++
     textodescanso.innerHTML ="Preparate, empezamos en <br>" + "<div class=\'tiempodescanso\'>"+(newsfeed[i].tiempopreparacion-contador)+"<div>";
+
 }
 else {
 rest = false
 playy()
 clearAlert()
     textodescanso.innerHTML ="";
+    frasemotivacion.innerHTML = "";
 }
 }
 
 function clearAlert() {
   clearTimeout(intervalID);
 }
-
-
-
 
 
 

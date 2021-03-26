@@ -35,12 +35,28 @@ h2 {
 .texto-encima{
     font-family: 'Oswald', sans-serif;
     position: absolute;
-    top: 75%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 2vw;
     text-align: center;
     color: #336699;
+    display: inline-block;
+}
+
+#motivacion{
+    font-family: 'Oswald', sans-serif;
+    position: absolute;
+    top: 97%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1vw;
+    text-align: center;
+    color: #white;
+    font-style: italic;
+    content: open-quote;
+
+
 }
 
 .tiempodescanso{
