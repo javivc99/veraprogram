@@ -35,6 +35,11 @@ var newsfeed = [
   },
 ];
 
+var holder = document.getElementById("myUl");
+for(var e=0; e < newsfeed.length; e++)
+  holder.innerHTML += '<li class="itemlista" id="ejercicionumero'+(e+1)+'">'+newsfeed[e].exercise_name+'<div class="numerorepes">'+' x'+newsfeed[e].limitrep+'</div></li>';
+
+
 function ChangeSrc(Src) {
     document.getElementById('my_video').src = Src + '.mp4';
 }
@@ -48,7 +53,7 @@ function carga(fuentevideo) {
   document.getElementById('video-player').setAttribute("src", fuentevideo); 
   div.innerHTML ="Repeticion " + repeticion + " de " + newsfeed[i].limitrep;
   exname.innerHTML = newsfeed[i].exercise_name;
-
+  document.getElementById('ejercicionumero'+(i+1)).style.backgroundColor = 'RED';
 }
 window.onload = carga(newsfeed[i].videosrc)
 
@@ -61,7 +66,7 @@ function playy() {
     else {
     document.getElementById('video-player').play();
     document.getElementById('video-player').removeAttribute("loop", "false"); 
-      document.getElementById('video-player').removeAttribute("style", "grayscale(100%);");
+    document.getElementById('video-player').removeAttribute("style", "grayscale(100%);");
     document.getElementById('video-player').setAttribute("autoplay", ""); 
     }
   }
@@ -76,6 +81,7 @@ document.querySelector('video').addEventListener('ended', function () {
     i++;
     repeticion = 1;
     div.innerHTML ="Repeticion " + repeticion + " de " + newsfeed[i].limitrep;
+   document.getElementById('ejercicionumero'+(i)).removeAttribute("style", "background-color: red;");
     exname.innerHTML = newsfeed[i].exercise_name;
     console.log("SIGUIENTE")
     carga(newsfeed[i].videosrc);
