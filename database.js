@@ -12,10 +12,49 @@ var newsfeed = [
     tiempopreparacion: 8,
   },
   {
-    exercise_name: "Increible este ejercicio",
+    exercise_name: "Sentadilla con KTB",
+    videosrc: "src/sentadilla.mp4",
+    limitrep: 5,
+    tiempopreparacion: 3,
+  },
+  {
+    exercise_name: "Flexiones mal hechas",
     videosrc: "src/flexion.mp4",
-    limitrep: 6,
-    tiempopreparacion: 20,
+    limitrep: 12,
+    tiempopreparacion: 8,
+  },  {
+    exercise_name: "Sentadilla con KTB",
+    videosrc: "src/sentadilla.mp4",
+    limitrep: 5,
+    tiempopreparacion: 3,
+  },
+  {
+    exercise_name: "Flexiones mal hechas",
+    videosrc: "src/flexion.mp4",
+    limitrep: 12,
+    tiempopreparacion: 8,
+  },  {
+    exercise_name: "Sentadilla con KTB",
+    videosrc: "src/sentadilla.mp4",
+    limitrep: 5,
+    tiempopreparacion: 3,
+  },
+  {
+    exercise_name: "Flexiones mal hechas",
+    videosrc: "src/flexion.mp4",
+    limitrep: 12,
+    tiempopreparacion: 8,
+  },  {
+    exercise_name: "Sentadilla con KTB",
+    videosrc: "src/sentadilla.mp4",
+    limitrep: 5,
+    tiempopreparacion: 3,
+  },
+  {
+    exercise_name: "Flexiones mal hechas",
+    videosrc: "src/flexion.mp4",
+    limitrep: 12,
+    tiempopreparacion: 8,
   },
 ];
 

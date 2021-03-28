@@ -14,27 +14,6 @@ let contador = 0;
 let tiempolimite = 10;
 
 
-var newsfeed = [
-  {
-    exercise_name: "Sentadilla con KTB",
-    videosrc: "src/sentadilla.mp4",
-    limitrep: 5,
-    tiempopreparacion: 3,
-  },
-  {
-    exercise_name: "Flexiones mal hechas",
-    videosrc: "src/flexion.mp4",
-    limitrep: 12,
-    tiempopreparacion: 8,
-  },
-  {
-    exercise_name: "Increible este ejercicio",
-    videosrc: "src/flexion.mp4",
-    limitrep: 6,
-    tiempopreparacion: 20,
-  },
-];
-
 var holder = document.getElementById("myUl");
 for(var e=0; e < newsfeed.length; e++)
   holder.innerHTML += '<li class="itemlista" id="ejercicionumero'+(e+1)+'">'+newsfeed[e].exercise_name+'<div class="numerorepes">'+' x'+newsfeed[e].limitrep+'</div></li>';
@@ -53,7 +32,7 @@ function carga(fuentevideo) {
   document.getElementById('video-player').setAttribute("src", fuentevideo); 
   div.innerHTML ="Repeticion " + repeticion + " de " + newsfeed[i].limitrep;
   exname.innerHTML = newsfeed[i].exercise_name;
-  document.getElementById('ejercicionumero'+(i+1)).style.backgroundColor = 'RED';
+  document.getElementById('ejercicionumero'+(i+1)).style.backgroundColor = '#d1e1e8';
 }
 window.onload = carga(newsfeed[i].videosrc)
 
@@ -81,7 +60,7 @@ document.querySelector('video').addEventListener('ended', function () {
     i++;
     repeticion = 1;
     div.innerHTML ="Repeticion " + repeticion + " de " + newsfeed[i].limitrep;
-   document.getElementById('ejercicionumero'+(i)).removeAttribute("style", "background-color: red;");
+   document.getElementById('ejercicionumero'+(i)).removeAttribute("style", "background-color: #d1e1e8;");
     exname.innerHTML = newsfeed[i].exercise_name;
     console.log("SIGUIENTE")
     carga(newsfeed[i].videosrc);
