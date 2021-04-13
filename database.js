@@ -33,7 +33,7 @@ var newsfeed = [
     exercise_name: "Puente de Isquios en silla - Pierna Drch",
     videosrc: "src/puente-gluteo-uni.mp4",
     limitrep: 8,
-    tiempopreparacion: 30,
+    tiempopreparacion: 20,
   },
   {
     exercise_name: "Puente de Isquios en silla - Pierna Izq",
@@ -75,7 +75,7 @@ var newsfeed = [
     exercise_name: "Puente de Isquios en silla - Pierna Drch",
     videosrc: "src/puente-gluteo-uni.mp4",
     limitrep: 8,
-    tiempopreparacion: 30,
+    tiempopreparacion: 20,
   },
   {
     exercise_name: "Puente de Isquios en silla - Pierna Izq",
@@ -117,7 +117,7 @@ var newsfeed = [
     exercise_name: "Puente de Isquios en silla - Pierna Drch",
     videosrc: "src/puente-gluteo-uni.mp4",
     limitrep: 8,
-    tiempopreparacion: 30,
+    tiempopreparacion: 20,
   },
   {
     exercise_name: "Puente de Isquios en silla - Pierna Izq",
